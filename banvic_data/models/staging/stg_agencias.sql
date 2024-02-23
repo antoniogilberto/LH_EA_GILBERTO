@@ -1,5 +1,5 @@
 with
-    source as (
+    stg_agencias as (
         select 
           cod_agencia
           , nome as nome_agencia
@@ -12,6 +12,4 @@ with
     )
 
 select *
-from source
-
-
+from stg_agencias

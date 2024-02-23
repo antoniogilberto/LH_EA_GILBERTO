@@ -1,8 +1,8 @@
 with
-    sources as (
+    source as (
         select 
           cod_agencia
-          , nome
+          , nome as nome_agencia
           , endereco
           , cidade
           , uf
@@ -12,6 +12,6 @@ with
     )
 
 select *
-from sources
+from source
 
 

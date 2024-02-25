@@ -1,7 +1,7 @@
 with
     stg_agencias as (
         select 
-          cod_agencia
+          cod_agencia as id_agencia
           , nome as nome_agencia
           , endereco
           , cidade
@@ -10,6 +10,5 @@ with
           , tipo_agencia
         from {{ source('dev_gilberto', 'agencias') }} 
     )
-
 select *
 from stg_agencias

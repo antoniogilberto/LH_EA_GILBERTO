@@ -1,7 +1,7 @@
 with
     stg_clientes as (
         select 
-          cod_cliente
+          cod_cliente as id_cliente
           , primeiro_nome
           , ultimo_nome
           , email
@@ -13,7 +13,6 @@ with
           , cep
         from {{ source('dev_gilberto', 'clientes') }} 
     )
-
 select *
 from stg_clientes
 

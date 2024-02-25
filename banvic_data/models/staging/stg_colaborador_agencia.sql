@@ -1,8 +1,8 @@
 with 
     stg_colaborador_agencia as (
         select 
-          cod_colaborador
-          , cod_agencia
+          cod_colaborador as id_colaborador
+          , cod_agencia as id_agencia
         from {{ source('dev_gilberto', 'colaborador_agencia') }} 
     )
 select *

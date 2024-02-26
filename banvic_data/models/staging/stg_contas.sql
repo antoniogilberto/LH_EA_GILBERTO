@@ -1,15 +1,15 @@
 with 
     stg_contas as (
         select 
-          cod_cliente
-          , cod_agencia
-          , cod_colaborador
+          cod_cliente as cliente_id
+          , cod_agencia as agencia_id
+          , cod_colaborador as colaborador_id
           , num_conta
           , tipo_conta
           , cast(parse_timestamp('%Y-%m-%d %H:%M:%S UTC', data_abertura) as date) as data_abertura
           , saldo_total
           , saldo_disponivel
-          , cast(parse_timestamp('%Y-%m-%d %H:%M:%S UTC', data_ultimo_lancamento) as date) as data_ultimo_lancamento
+          , date(data_ultimo_lancamento) as ultimo_lancamento
         from {{ source('dev_gilberto', 'contas') }} 
     )
 select *

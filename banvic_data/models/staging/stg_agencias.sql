@@ -1,7 +1,7 @@
 with
     stg_agencias as (
         select 
-          cod_agencia as id_agencia
+          cod_agencia as agencia_id
           , nome as nome_agencia
           , cidade
           , uf

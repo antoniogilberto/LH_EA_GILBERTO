@@ -3,7 +3,6 @@ with
         select 
           cod_agencia as id_agencia
           , nome as nome_agencia
-          , endereco
           , cidade
           , uf
           , data_abertura
